@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">   Centro de estudios Luis Vives</string>
+    <string name="luisvives">luisvivesString</string>
+    <string name="ModelosExamenesString">Repositorio de exámenes</string>
+    <string name="title_exam_models_string">Repositorio de exámenes</string>
+    <string name="home_text"><b>Tu arma para aprobar!</b></string>
+    <string name="home_description">
+        <![CDATA[
+            <html>
+                <head></head>
+                <bodystyle text-align:justify="">
+                    <p>La academia comenzó a funcionar en 1999 y desde entonces miles de alumnos han confiado en nosotros.</p>
+                    <p> Conócenos más a través de esta aplicación o de nuestra web <a href="http://luis-vives.es">luis-vives.es</a></p>
+                    <p>Recuerda que si tienes alguna duda, puedes venir a visitarnos a:</p>
+                    <p><div style="text-align: center"><b>Calle Arenal 18 (Metro Sol)</b></div></p>
+                    <p>O por teléfono al:</p>
+                    <p><center><b>0034 648 502 669</b></center></p>
+        </bodystyle>
+        </html>
+    ]]>
+    </string>
+    <string name="footer_text_home"><b>Click en el menú</b></string>
+    <string name="checkConnection">Unable to retrieve data. Please, check internet connection.</string>
+    <string name="select_course_text">Selecciona un curso:</string>
+</resources>
