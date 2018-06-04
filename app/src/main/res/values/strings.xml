@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">   Centro de estudios Luis Vives</string>
-    <string name="luisvives">luisvivesString</string>
+    <string name="app_name">C.E. Luis Vives</string>
+    <string name="luisvives">C.E. Luis Vives</string>
     <string name="ModelosExamenesString">Repositorio de exámenes</string>
     <string name="title_exam_models_string">Repositorio de exámenes</string>
     <string name="home_text"><b>Tu arma para aprobar!</b></string>
@@ -21,5 +21,10 @@
     </string>
     <string name="footer_text_home"><b>Click en el menú</b></string>
     <string name="checkConnection">Unable to retrieve data. Please, check internet connection.</string>
-    <string name="select_course_text">Selecciona un curso:</string>
+    <string name="select_course_text">Selecciona tipo examen y año</string>
+    <string name="select_topic_string">Selecciona una asignatura</string>
+    <string name="select_year_string">Selecciona un año</string>
+    <string name="fetching_courses_loading_string">Obteniendo cursos disponibles...</string>
+    <string name="get_exam_string">Ver examen</string>
+    <string name="get_general_info_string">Información general</string>
 </resources>

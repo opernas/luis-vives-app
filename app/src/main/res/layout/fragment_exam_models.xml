@@ -1,41 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_exam_model_id"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="luis_vives.app.view.fragmentExamModels">
+    tools:context="luis_vives.app.view.fragmentExamModels"
+    android:background="@color/luis_vives_background_grey">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/more_grey_background">
 
         <TextView
-            android:id="@+id/select_course_picker_text"
+            android:id="@+id/title_fragment_exam_models_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:paddingTop="20dp"
+            android:paddingTop="15dp"
             android:text="@string/select_course_text"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/luis_vives_blue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <NumberPicker
             android:id="@+id/select_course_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:theme="@style/NumberPickerStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/select_year_picker"
+            app:layout_constraintTop_toBottomOf="@+id/title_fragment_exam_models_text" />
+
+        <NumberPicker
+            android:id="@+id/select_topic_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/NumberPickerStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_select_topic" />
+
+        <NumberPicker
+            android:id="@+id/select_year_picker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            android:theme="@style/NumberPickerStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_fragment_exam_models_text" />
+
+        <TextView
+            android:id="@+id/textView_select_topic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:paddingTop="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/select_topic_string"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/luis_vives_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/select_course_picker_text" />
+            app:layout_constraintTop_toBottomOf="@+id/select_course_picker" />
+
+        <Button
+            android:id="@+id/button_get_exam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/luis_vives_blue"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/get_exam_string"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@android:color/background_light"
+            app:layout_constraintBottom_toBottomOf="@+id/button_get_info"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_topic_picker" />
+
+        <Button
+            android:id="@+id/button_get_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/luis_vives_blue"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/get_general_info_string"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:textColor="@color/more_grey_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.391"
+            app:layout_constraintStart_toEndOf="@+id/button_get_exam"
+            app:layout_constraintTop_toBottomOf="@+id/select_topic_picker"
+            app:layout_constraintVertical_bias="0.0" />
 
     </android.support.constraint.ConstraintLayout>
 </FrameLayout>

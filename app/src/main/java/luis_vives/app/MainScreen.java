@@ -1,20 +1,16 @@
 package luis_vives.app;
 
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
-import android.text.Spanned;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
 import luis_vives.app.view.fragmentExamModels;
+import luis_vives.app.view.main_fragment;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -27,15 +23,16 @@ public class MainScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         initializeMenu();
-        SetMainText();
+        ShowMainFragment();
     }
 
-    private void SetMainText(){
-        String htmlAsString = getString(R.string.home_description);
-        Spanned htmlAsSpanned = Html.fromHtml(htmlAsString); // used by TextView
-        // set the html content on the TextView
-        TextView textView = (TextView) findViewById(R.id.home_description_text);
-        textView.setText(htmlAsSpanned);
+    private void ShowMainFragment(){
+        Fragment fragment = null;
+        fragment = new main_fragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, fragment)
+                .commit();
+        drawerLayout.closeDrawers();
     }
 
     private void initializeMenu(){
@@ -53,8 +50,6 @@ public class MainScreen extends AppCompatActivity {
                 Fragment fragment = null;
                 switch (menuItem.getItemId()) {
                     case R.id.menu_seccion_1:
-                        ConstraintLayout mainLayout = findViewById(R.id.main_content_layout);
-                        mainLayout.setVisibility(View.GONE);
                         fragment = new fragmentExamModels();
                         fragmentTransaction = true;
                         break;
